@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries Api | Giovanni Cappelletto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="title">Where in the world?</h1>
+        <button class="header__btn">
+            <i class="fa-solid fa-moon"></i>
+            <p>Dark Mode</p>  
+        </button>
+    </header>
+
+    <main>
+        <nav>
+            <form>
+                <label for="research">
+                    <i class="fa-solid fa-magnifying-glass icon"></i>
+                </label>
+                <input type="text" placeholder="Search for a country..." class="research" id="research">
+            </form>
+            
+            <select name="dropdown" class="dropdown">
+                <option selected>Filter by Region</option>
+                <option value="Africa">Africa</option>
+                <option value="America">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+                <option value="Antarctic">Antarctic</option>
+            </select>
+        </nav>
+
+        <div class="cards"></div>
+    </main>
+</body>
+</html>
