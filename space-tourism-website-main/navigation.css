@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;600&family=Bellefair&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+:root {
+    --very-dark-blue: hsl(230, 35%, 7%);
+    --grayish: hsl(231, 77%, 90%); 
+    --white: hsl(0, 0%, 100%); 
+}
+
+body {
+    background-image: url('./assets/home/background-home-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden; 
+}
+
+/* Navigation Bar */
+header {
+    display: grid; 
+    grid-template-columns: auto auto;
+    align-items: center;
+    margin-inline: 20px; 
+}
+
+.logo {
+    margin-block-start: 20px; 
+    cursor: pointer; 
+}
+
+nav {
+    position: fixed; 
+    z-index: 10; 
+    inset: 0 0 0 30%; 
+    background-color: hsl(var(--white) / 0.05);
+    backdrop-filter: blur(1.5rem); 
+    transform: translateX(100%); 
+    transition: transform 250ms linear; 
+}
+
+nav.active {
+    transform: translateX(0%); 
+}
+
+.nav-links {
+    display: flex; 
+    flex-direction: column;
+    gap: 1.5rem; 
+    margin-block-start: 100px;
+}
+
+.nav-links li {
+    font-family: 'Barlow Condensed', sans-serif;
+    list-style-type: none; 
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    margin-inline-start: 20px; 
+}
+
+.nav-links li a {
+    display: block;
+    text-decoration: none; 
+    position: relative;
+    color: var(--white);
+    padding: 5px;
+}
+
+.nav-links li a::after {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    background-color: var(--grayish); 
+    height: 100%; 
+    width: 2px; 
+    transform: scale(0, 1);     
+    transition: transform 125ms linear; 
+}
+
+.nav-links li a:hover::after {
+    transform: scale(1, 1); 
+}
+
+.nav-links li a:focus::after,
+.nav-links li .active::after {
+    background-color: var(--white); 
+    transform: scale(1, 1); 
+}
+
+.nav-links li a span {
+    display: inline;
+    font-weight: bold;
+}
+
+.hamburger-btn {
+    cursor: pointer;
+}
+
+.open-btn {
+    margin-block-start: 20px; 
+    justify-self: end; 
+}
+
+.close-btn {
+    float: right;
+    margin: 40px 20px 0 0; 
+}
+
+/* Tablet */
+@media screen and (min-width: 600px) {
+    /* Navigation Bar */
+    body {
+        background-image: url('./assets/home/background-home-tablet.jpg'); 
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-inline-start: 20px; 
+    }
+
+    .hamburger-btn {
+        display: none; 
+    }
+
+    nav {
+        inset: 0;
+        transform: translateX(0%);
+        position: relative;
+        padding-inline: 20px; 
+    }
+
+    .nav-links {
+        flex-direction: row;
+        margin-block-start: 0;
+    }
+
+    .nav-links li a {
+        padding-block: 35px;
+    }
+
+    .nav-links li a::after {
+        content: ''; 
+        position: absolute; 
+        top: calc(100% - 3px); 
+        left: 0;
+        height: 3px; 
+        width: 100%; 
+    }
+
+    .nav-links li a span[data-visible="false"] {
+        display: none; 
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1350px) {
+    body {
+        background-image: url('./assets/home/background-home-desktop.jpg'); 
+    }
+    
+    /* Navigation Bar */
+    header {
+        margin-block: 20px; 
+        margin-inline: 0; 
+    }
+
+    nav {
+        padding-inline: 60px; 
+    }
+
+    nav::before {
+        content: ''; 
+        background-color: var(--white); 
+        height: 1px; 
+        width: 80%; 
+        position: absolute;
+        left: -520px; 
+        top: 50%; 
+        opacity: .5;
+    }
+}

@@ -1,0 +1,157 @@
+body {
+    background-image: url('./assets/technology/background-technology-mobile.jpg');
+}
+
+.section {
+    font-family: 'Barlow Condensed', sans-serif; 
+    font-size: clamp(16px, 2vw, 28px);
+    font-weight: 400;
+    letter-spacing: 4.72px;
+    text-align: center;
+    margin-block-end: 30px; 
+    color: var(--white); 
+}
+
+.section span {
+    margin-inline-end: 15px; 
+    font-weight: 700; 
+    opacity: .2;
+}
+
+.image {
+    background-image: url('./assets/technology/image-launch-vehicle-landscape.jpg');
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    aspect-ratio: 2;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; 
+    margin-block-end: 50px;
+}
+
+.list span {
+    --size: clamp(50px, 10vw, 70px);
+
+    font-family: 'Bellefair', serif;
+    display: grid;
+    place-items: center;
+    width: var(--size);
+    height: var(--size);
+    font-size: clamp(16px, 5vw, 32px);
+    color: var(--white);
+    border: 1px solid var(--grayish);
+    position: relative;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 250ms linear; 
+}
+
+.list span:hover {
+    border: 1px solid var(--white);
+}
+
+.focused {
+    background-color: var(--white); 
+    color: var(--very-dark-blue) !important; 
+}
+
+.title {
+    font-family: 'Bellefair', serif; 
+    font-size: clamp(56px, 3vw, 100px); 
+    color: var(--white);
+    text-transform: uppercase; 
+    font-weight: 400; 
+    text-align: center;
+    position: relative;
+    margin-block: 10px; 
+}
+
+.title::before {
+    content: 'THE TERMINOLOGY ...'; 
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px; 
+    color: var(--grayish); 
+    letter-spacing: 2.7px;
+    position: absolute; 
+    top: -25px; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.desc {
+    font-family: 'Barlow', sans-serif; 
+    color: var(--grayish); 
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.7; 
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 50px; 
+}
+
+/* Tablet */
+@media screen and (min-width: 600px) {
+    body {
+        background-image: url('./assets/technology/background-technology-tablet.jpg');
+    }
+
+    /* Main */
+    .section {
+        text-align: left;
+        margin-inline-start: 40px; 
+        margin-block-start: 10px; 
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1350px) {
+    body {
+        background-image: url('./assets/technology/background-technology-desktop.jpg');
+    }
+
+    /* Main */
+    .section {
+        margin-inline-start: 150px; 
+    }
+
+    .container {
+        display: flex; 
+    }
+
+    .image {
+        background-image: url('./assets/technology/image-launch-vehicle-portrait.jpg');
+        background-position: right 0;
+        aspect-ratio: 1;
+        width: 100%; 
+        order: 2; 
+    }
+
+    .wrapper {
+        order: 1; 
+        display: flex; 
+        align-items: center;
+        gap: 3rem;
+        margin: 30px 150px; 
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem; 
+    }
+
+    .title,
+    .desc {
+        text-align: left; 
+        margin-inline: 0; 
+        width: 100%;
+    }
+
+    .title::before {
+        left: 0;
+        transform: translateX(0);
+    }
+}

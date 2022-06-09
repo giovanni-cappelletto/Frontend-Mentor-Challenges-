@@ -1,0 +1,108 @@
+/* Main */
+main {
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+    gap: 5rem; 
+    margin-inline: 150px; 
+    margin-block-start: 100px; 
+}
+
+.text-container {
+    text-align: center;
+    width: max-content;
+}
+
+.subtitle {
+    font-family: 'Barlow Condensed', sans-serif; 
+    text-transform: uppercase;
+    font-size: clamp(16px, 2vw, 28px); 
+    letter-spacing: 4.75px;
+    font-weight: 400;
+    margin-block-end: 10px;
+    color: var(--grayish);
+}
+
+.title {
+    font-family: 'Bellefair', serif;
+    font-size: clamp(80px, 20vw, 150px);
+    font-weight: 400;
+    text-transform: uppercase; 
+    color: var(--white); 
+    margin-block-end: 30px; 
+}
+
+.desc {
+    font-family: 'Barlow', sans-serif;
+    font-size: clamp(15px, 2vw, 18px);
+    width: 25%;
+    line-height: 1.5;
+    margin: 0 auto; 
+    color: var(--grayish);
+}
+
+.btn a {
+    font-family: 'Bellefair', serif;
+    display: grid; 
+    place-items: center; 
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%; 
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-block-end: 50px; 
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    color: var(--very-dark-blue);
+    background-color: var(--white); 
+}
+
+.btn a::after {
+    content: '';
+    position: absolute; 
+    z-index: -1; 
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: all .5s linear;
+
+}
+.btn a:hover::after {
+    transform: scale(1.3);
+    opacity: .2;  
+}
+
+/* Tablet */
+@media screen and (min-width: 600px) {
+    /* Main */
+    .desc {
+        width: 30%;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1350px) {
+    /* Main */
+    main {
+        flex-direction: row;
+    }
+
+    .text-container {
+        text-align: left;
+    }
+    
+    .desc {
+        margin: 0; 
+        width: 70%;
+    }
+
+    .btn {
+        align-self: flex-end;
+    }
+
+    .btn a {
+        margin-block-end: 0; 
+    }
+}

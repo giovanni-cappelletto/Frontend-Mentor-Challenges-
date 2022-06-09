@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="technology.css">
+  <script src="navigation.js" defer></script>
+  <script src="technology.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" class="logo">
+        <g fill="none" fill-rule="evenodd">
+          <circle cx="24" cy="24" r="24" fill="#FFF" />
+          <path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/>
+        </g>
+      </svg>
+    </a>
+        
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" class="hamburger-btn open-btn">
+      <g fill="#D0D6F9" fill-rule="evenodd">
+        <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+        </g>
+    </svg>
+        
+    <nav>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" class="hamburger-btn close-btn">
+        <g fill="#D0D6F9" fill-rule="evenodd">
+          <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
+          <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" />
+        </g>
+      </svg>
+        
+      <ul class="nav-links">
+        <li>
+          <a href="index.html"><span data-visible="true">00</span> HOME</a>
+        </li>
+        <li>
+          <a href="destination.html"><span data-visible="true">01</span> DESTINATION</a>
+        </li>
+        <li>
+          <a href="crew.html"><span data-visible="true">02</span> CREW</a>
+        </li>
+        <li>
+          <a href="technology.html" class="active"><span data-visible="true">03</span> TECHNOLOGY</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h5 class="section"><span>03</span>SPACE LAUNCH 101</h5>
+
+    <div class="container">
+      <div class="image"></div>
+
+      <div class="wrapper">
+        <div class="list">
+          <span class="focused">1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+
+        <div class="text-container">
+          <h2 class="title">Launch Vehicle</h2>
+          <p class="desc">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to caryy a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

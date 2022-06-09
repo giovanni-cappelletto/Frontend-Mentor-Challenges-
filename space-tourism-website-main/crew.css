@@ -1,0 +1,173 @@
+body {
+    background-image: url('./assets/crew/background-crew-mobile.jpg');
+}
+
+.section {
+    font-family: 'Barlow Condensed', sans-serif; 
+    font-size: clamp(16px, 2vw, 28px);
+    font-weight: 400;
+    letter-spacing: 4.72px;
+    text-align: center;
+    margin-block-end: 30px; 
+    color: var(--white); 
+}
+
+.section span {
+    margin-inline-end: 15px; 
+    font-weight: 700; 
+    opacity: .2;
+}
+
+.container {
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem; 
+}
+
+figure {
+    border-bottom: 1px solid hsl(0, 0%, 59%);
+    margin-inline: 20px;
+}
+
+.person {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex; 
+    flex-direction: column;
+}
+
+.title {
+    order: 2; 
+    font-family: 'Bellefair', serif; 
+    color: var(--white); 
+    font-weight: 400;
+    font-size: clamp(24px, 10vw, 56px);
+    text-transform: uppercase; 
+    position: relative; 
+    text-align: center;
+    margin-block-start: 70px; 
+    margin-block-end: 20px; 
+}
+
+.title::before {
+    content: attr(data-content);
+    color: var(--white); 
+    opacity: .5;
+    text-transform: uppercase;
+    font-size: clamp(16px, 5vw, 32px);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.desc {
+    order: 3; 
+    font-family: 'Barlow', sans-serif; 
+    color: var(--grayish); 
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.7; 
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 20px; 
+}
+
+.dot-list {
+    order: 1; 
+    display: flex;
+    justify-content: center; 
+    gap: 1rem; 
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--white);
+    opacity: .4; 
+    cursor: pointer;
+    transition: opacity 250ms linear; 
+}
+
+.dot:hover {
+    opacity: .6; 
+}
+
+.dot:focus,
+.focused {
+    opacity: 1;
+}
+
+
+/* Tablet */
+@media screen and (min-width: 600px) {
+    body {
+        background-image: url('./assets/crew/background-crew-tablet.jpg');
+    }
+
+    /* Main */
+    .section {
+        text-align: left;
+        margin-inline-start: 40px; 
+        margin-block-start: 10px; 
+    }
+
+    figure {
+        border: none; 
+        order: 2; 
+    }
+
+    .desc {
+        margin: 0 auto 70px; 
+    }
+
+    .dot-list {
+        order: 3; 
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1350px) {
+    body {
+        background-image: url('./assets/crew/background-crew-desktop.jpg');
+    }
+
+    /* Main */
+    .section {
+        margin-inline-start: 150px; 
+    }
+
+    .container {
+        flex-direction: row;
+        margin-inline: 150px;
+    }
+
+    figure {
+        flex: 1; 
+    }
+
+    .wrapper {
+        flex: 1.5; 
+    }
+
+    .title {
+        text-align: left;
+    }
+
+    .title::before {
+        left: 0; 
+        transform: translateX(0);
+    }
+
+    .desc {
+        text-align: left; 
+        margin-inline: 0; 
+    }
+    
+    .dot-list {
+        justify-content: start;
+    }
+}
